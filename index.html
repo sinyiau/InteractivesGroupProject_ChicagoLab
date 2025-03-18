@@ -1,1 +1,116 @@
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+        </style> 
+</head>
 
+<body>
+<div id="content">
+    <h1>Group project assignment</h1>
+    <h1>Chicago Investigative Lab project</h1>
+    <h2>Sinyi Au, Sara Cooper, Christiana Freitag, Janani Janarthanan, Tom O'Connor, Britton Struthers-Lugo</h2>
+
+    <div class="container">
+        <h1>Christiana Freitag</h1>
+        <div class="flourish-embed" data-src="visualisation/22084103"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22084103/thumbnail" width="100%" alt="bubble-chart visualization" /></noscript></div>
+        
+        <h1>Methodology</h1>
+        <pre class><p>
+        ○	Using the original dataset, we created a new column called “ALL NAMES” by combining columns “Member First Name,” “Member Last Name,” and “MI” using the =CONCATENATE formula 
+        ○	I then created a new sheet called “Top Repeated Offenders - BY TITLE” and hid all columns besides the following columns: 
+            ■	Incident Date Time 
+            ■	Title at Incident 
+            ■	Current Title 
+            ■	All Names
+            ■	Appointed Date
+    ○	To determine the top 50 users of force, I created a pivot table with “All Names” as the row and value - I then filtered by COUNTA to show the users of force with 16 or more incidents. 
+    ○	I then filtered by those individuals and named a tab “Top 50 Use of Force” 
+    ○	I duplicated the sheet and created another tab titled “Top 50 Promotion” and added another column called “Title Status” for “promotion,” “demotion,” or “not changed” based on “title at incident” compared to “current title” 
+    ○	Finally, I created a pivot table to determine the number of demotions, promotions or unchanged positions for the top 50 users of force with “Title Status” as row and value
+
+        </p></pre>
+    </div>
+
+    <div class="container">
+        <h1>Sara Cooper</h1>
+        <div class="flourish-embed" data-src="visualisation/22164822"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22164822/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
+        <div class="flourish-embed" data-src="visualisation/22163019"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22163019/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
+        <h1>Methodology</h1>
+        <pre calss><p>
+○	TRR data was combined with CIT training data which included:
+    ■	Officer name
+    ■	Officer star number
+    ■	Date of CIT certification
+○	Each TRR report was coded (1,0) to indicate whether the reporting officer had CIT training before the event date
+○	A separate table was created to deduplicate UoF events (multiple TRR reports are often made for the same event)
+○	Each event was coded (1,0) for whether or not a CIT trained officer was involved in the response
+○	Each event was additionally coded (1,0) for its relation to a mental health issue
+○	Additional columns were added to capture the event date as well as several other criteria for exploratory data analysis (Beat, TRR Type, Subject Injury)
+○	For the pie charts the total percentage of CIT trained officer responses to mental health and overall UoF incidents were calculated accordingly:
+    ■	COUNTIFS([CIT Trained Officer?],1,[Mental Health],1)/COUNTIF([Mental Health],1)
+    ■	COUNTIF(CIT Trained Officer?,1]/COUNT([Year])
+○	For the volume over time chart, the proportion of UoF incidents with CIT trained officers present for each year were calculated accordingly:
+    ■	COUNTIFS([Year],year,[CIT Trained Officer?],1,[Mental Health?],1)/COUNTIFS([Year],year,[Mental Health?],1)
+    ■	COUNTIFS([Year],year,[CIT Trained Officer?],1)/COUNTIF([Year],year)
+
+        </p></pre>
+    </div>
+    
+    
+    <div class="container">
+        <h1>Britton Struthers-Lugo</h1>
+        <div class="flourish-embed" data-src="visualisation/22081659">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/22081659/thumbnail" width="100%" alt="cards visualization"/> </noscript>
+        </div>
+
+        <h1>Methodology</h1>
+            <pre class><p> 
+            ●	Using the original dataset, we created a new column called “ALL NAMES” by combining columns “Member First Name,” “Member Last Name,” and “MI” using the =CONCATENATE formula (textjoin also works)
+            ●	Then, I made a pivot table to determine which members had the most TRR offenses by sum (see ‘Pivot Table 4’ in the data). I selected the ones with 4 or more TRR reports for ease. 
+                ○	The pivot table was set up as follows:
+                    ■	Rows: 
+                        ●	ALL NAMES
+                            ○	Order: Descending
+                            ○	Sort By: COUNTA of Type Activity New TRR
+                        ●	Type Activity New TRR
+                            ○	Order: Descending
+                            ○	Sort By: COUNTA of Type Activity New TRR
+                    ■	Columns: n/a
+                    ■	Values:
+                        ●	Type Activity New TRR
+                            ○	Summarize by: COUNTA
+                            ○	Show as: Default
+                    ■	Filters:
+                        ●	Type Activity New TRR
+                            ○ ‘Mental health’ (49 values with ‘mental health’ in them)
+                        ○ Since that allowed me to identified the offending officers, I went back to the original dataset and filtered it by the officers I wanted to focus on. See the sheet “Top Officer Offenders”. 
+                ●	I made a second pivot table (see ‘Pivot Table 5’) to get each       officers’ individual TRR counts, the level of force in these incidents, and the sum. I did this to calculate the average per officer, but this could be a table in and of itself. 
+                            ○	The pivot table can be set up as follows: 
+                    ■	Rows: 
+                        ●	ALL NAMES
+                            ○	Order: Ascending
+                            ○	Sort By: ALL NAMES
+                    ■	Columns:
+                        ●	FORCE LEVEL
+                            ○	Order: Ascending
+                            ○	Sort by: FORCE LEVEL
+                    ■	Values:
+                        ●	FORCE LEVEL
+                            ○	Summarize by: COUNTA
+                            ○	Show as: Default 
+                    ■	Filters:
+                        ●	Type Activity New TRR
+                            ○	‘Mental health’ (49 values with ‘mental health’ in them)
+                
+        </p></pre>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

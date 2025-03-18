@@ -1,0 +1,63 @@
+/*desktop*/
+#content{
+    width: 70%;
+    margin: auto;
+    font-family: "DM Serif Text", serif;
+}
+
+/*phone*/
+@media (orientation: portrait) {
+    #content {
+        width: 100%;
+        line-height: 1.5em;
+        font-size: 1.5em;
+    }
+
+   .container{
+        width: 100%;
+        flex-direction: column;
+}
+}
+
+pre {
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    white-space: pre-wrap; 
+}
+
+body{
+    background-color: #f8f3f2;
+    color: #393939;
+    height: 100vh;
+}
+
+h1{
+    font-size: 2em;
+    color:#393939;
+    line-height: 1.2em;
+    font-weight: 300;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.3em;
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 300;
+}
+
+p{
+    font-size: 1em;
+    line-height: 1.2em;
+    font-weight: 100;
+    width: 80%;
+    padding-left: 10%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid grey;
+}
+
