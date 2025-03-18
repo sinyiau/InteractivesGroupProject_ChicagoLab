@@ -63,7 +63,6 @@ p{
 .container {
     width: 100%;
     max-width: 1200px;
-    border: 1px solid grey;
     padding: 30px;
 }
 
