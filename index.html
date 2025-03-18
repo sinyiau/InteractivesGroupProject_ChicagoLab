@@ -14,6 +14,7 @@
 
     <div class="container">
         <h1>Christiana Freitag</h1>
+        <h2>Pictogram visualization on CPD top users of force by title change</h2>
         <div class="flourish-embed" data-src="visualisation/22084103"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22084103/thumbnail" width="100%" alt="bubble-chart visualization" /></noscript></div>
         
         <h1>Methodology</h1>
@@ -35,8 +36,10 @@
 
     <div class="container">
         <h1>Sara Cooper</h1>
+        <h2>CIT Officer Presence Incidents Between Mental Health and Overall UoF Incidents</h2>
         <div class="flourish-embed" data-src="visualisation/22164822"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22164822/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
+        <h2>CIT Officer Presence in UoF Incidents Over Time</h2>
         <div class="flourish-embed" data-src="visualisation/22163019"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22163019/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
         <h1>Methodology</h1>
@@ -63,6 +66,7 @@
     
     <div class="container">
         <h1>Britton Struthers-Lugo</h1>
+        <h2>Top CPD Officers in UoF Reports</h2>
         <div class="flourish-embed" data-src="visualisation/22081659">
         <script src="https://public.flourish.studio/resources/embed.js"></script>
         <noscript><img src="https://public.flourish.studio/visualisation/22081659/thumbnail" width="100%" alt="cards visualization"/> </noscript>
@@ -109,8 +113,91 @@
                 
         </p></pre>
         </div>
+
+    <div class="container">
+        <h1>Janani Janarthanan</h1>
+        <p>Kari’s raw file on 911 Mental health was cleaned to reflect data between Jan 2024-Jan 2025. Subsequently the data was pivoted on initial dispatch, final dispatch and final disposition.</p>
+
+        <h2>How Mental Health Calls Are Understood in Chicago</h2>
+        <div class="flourish-embed" data-src="visualisation/22128951"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22128951/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
+        <p>For this visualization, all the 90,075 calls were pivoted on their initial dispatch. And this was then sequentially presented on a pie-chart on flourish.</p>
+
+        <h2>How Mental Health Calls Are Answered in Chicago</h2>
+        <div class="flourish-embed" data-src="visualisation/22128421"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22128421/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
+        <p>For this visualization, the call data was pivoted on the mental health scenarios in the final dispatch.  This reduced the total calls to 22,279 and divided them into 8 categories. The final dispatch labelled ‘unauth absence’ has been expanded to the label ‘unauthorized absence’ in the final visualization.</p>
+
+        <h2>Chicago's Response to Mental Health Emergency Calls</h2>
+        <div class="flourish-embed" data-src="visualisation/22163390"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22163390/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
+        <p>The third visualization was pivoted on final disposition codes used by the responders. The disposition codes were filtered for the Z in the alphanumeric code. They were subsequently reordered in terms of highest-to-lowest value. The top 20 disposition codes with the highest number of calls were presented in the bar chart.  </p>
     </div>
 
+    <div class="container">
+        <h1>Tom O'Conner</h1>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/22162933"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22162933/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
+        <pre class><p>
+            1.	        Kari cleaned data
+            2.	Deleted all entries from January 2025, so remaining data in sheet covers whole year of 2024 (Jan 1 through Dec 31)					
+            3.	Create blank column to right of Column C then split text to columns in Column C to separate time and date - now split into "Date Call Received" and "Time Call Received (On day listed C)”
+            4.	Filter Column I ("Final Disposition") with "Z", which is the code used by CPD to identify mental health-related cases					
+            5.	Create new sheet "2. Disposition Z" by pasting special values only
+            6.	Bold and freeze top row					
+            7.	Create pivot table "3. Z Verification" to establish whether the values are correct
+            8.	Identified two entries that were picked up that did not have "Z" in the code to identify a mental health situation but rather had "Z" in the body of the text. Those were highlighted and were removed:			
+            "5087 - INJURY TO CITIZEN ON PUB." (6 total) and "0495 - BATT/AGG SENIOR CITIZEN" (13 total). Cumulative total is 19. Removed those 19 entries in "2. Disposition - Z" sheet
+            9.	Create filter by condition "is empty" on "2. Disposition - Z" to establish how many of the 8913 calls (recorded with a "Z" in the number code to identify mental health related) do not list a call received time
+            10.	Copy and paste special values for sheet into "4. No time entry"
+            11.	372 rows empty - subtracting 1 for the header row - equals 371 entries without a recorded time for call received. Noted at bottom of viz	
+            12.	Changed time format in D "Time Call received" to 24-hour style with leading zero for hour
+            13.	Insert blank column to right of H, titled "Time Call Received (Rounded)” and paste in "Hour Call Received (listed in C)" from Column D
+            14.	Create column to the right (Column G - "Hour of call" and Column H "Minute of call") then split text to columns from G and format numbers in G as 00	
+            15.	Pivot table "8. By hour" then establish number of calls by hour then paste special values only into "9. Hourly Values" and sort by descending
+               
+        </p></pre>
+
+        <h2>Frequency of Mental Health-Related 911 Calls in Chicago in 2024 by 6-hour period</h2>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/22124035"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22124035/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+        
+        <pre class><p>
+1)	Follows on from steps 1 – [] above
+2)	Inserted column to the right of Column D and name "Time period of call"
+3)	"Added formula (generated with AI after an extensive process): =IF(ISBLANK(D2), ""Unknown"", IF(AND(D2 >= TIME(0,0,0), D2 < TIME(6,0,0)), ""00:00 - 05:59 (Night)"", IF(AND(D2 >= TIME(6,0,0), D2 < TIME(12,0,0)), ""06:00 - 11:59 (Morning)"", IF(AND(D2 >= TIME(12,0,0), D2 < TIME(18,0,0)), ""12:00 - 17:59 (Afternoon)"", ""18:00 - 23:59 (Evening)""))))"
+4)	Visual check indicates that results are accurate, so created pivot table "5. Time Breakdown" for "Time period of call"
+5)	Additional verification of results is that 371 are listed as "Unknown", consistent with earlier finding. 8912 total is consistent with total number too.
+        </p></pre>
+    </div>
+
+    <div class="container">
+        <h1>Sinyi Au</h1>
+        <h2>Sankey diagram of mental health calls</h2>
+        <div class="flourish-embed flourish-sankey" data-src="visualisation/22059605"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22059605/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
+
+        <h1>Methodology</h1>
+<p>1. There are five types of initial dispatches, after discussion with Kari, we decided to eliminate check wellbeing calls. Therefore, this chart is done based on the 22,279 mental health 911 calls in Chicago in 2024.</p>
+
+<p>2. I created the chart aiming to show how these calls went from initial dispatch to final dispatch, and finally to final disposition. I filtered each type of initial dispatch, then used pivot tables to get the number of final dispatches.</p>
+
+<p>3. Kari explained to us that all disposition codes ending in Z are mental health-related. Since the data came like 0520Z - ASSAULT AGG KNIFE, I split text into columns and filtered out non-mental health disposition codes. From here, I sorted the Final Dispatch: mental health related, non-mental health related, 988 calls and Cares&alternatives. The reason why I put 988 calls and Cares&alternatives separately is because they are mental health only service.</p>
+
+<p>4. The pivot tables for final disposition were very long because there are different codes under the same type, for example, 15IZ - Inhalator;MenHlth;Ho and 15PZ - Inhalator;MenHlth;Ot. Many of these codes only orrcured once or twice. Therefore, I screened out code types with more than 10 counts. Most of the disposition codes could be confirmed, but one abbreviation was confusing: Other Mis (disposition code 19.)</p>
+
+<p>5. For the chart, as there are a total of three stages, I checked how the flourish sankey chart sample data sheet worked. Then I divided the type of calls into source and destination, and marked step 0 to step 1 (initial dispatch to final dispatch) and step 1 to step 2 (final dispatch to final disposition.)</p>
+    </div>
+    
+    <div class="container">
+    <h1>Angeles Ponpa</h1>
+    <h2>Instagram Reels</h2>
+    <div class="video">
+        <iframe src="https://drive.google.com/file/d/12mDvQvHaJFAdrZr1y3z1J2KtuiBuOT4T/preview" width="100%" height="100%" ></iframe>
+        <p>Instagram Reels 1</p>
+
+        <iframe src="https://drive.google.com/file/d/1rEsWZbFoSbKbXZR-WEVvZGIyLWZa3QFZ/preview" width="100%" height="100%"></iframe>
+        <p>Instagram Reels 2</p>
+    </div>
+    </div>
 </div>
 </body>
 </html>
